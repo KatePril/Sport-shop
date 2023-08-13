@@ -30,7 +30,7 @@ public class Cap {
 
     @Override
     public String toString() {
-        return "Cap (manufacturer: " + manufacturer + "; price" + price + ")";
+        return "Cap (manufacturer: " + manufacturer + "; price " + price + ")";
     }
 
     public String getManufacturer() {

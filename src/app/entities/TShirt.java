@@ -28,7 +28,7 @@ public class TShirt {
     }
     @Override
     public String toString() {
-        return "T-Shirt (manufacturer: " + manufacturer + "; price" + price + ")";
+        return "T-Shirt (manufacturer: " + manufacturer + "; price " + price + ")";
     }
 
     public String getManufacturer() {

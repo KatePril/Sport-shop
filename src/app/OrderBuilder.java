@@ -6,7 +6,7 @@ import app.entities.TShirt;
 
 public final class OrderBuilder {
 
-    public static Order collectOrder(String orderName, String capColor, String tShirtColor) {
+    public static Order collectOrder(String orderName, String tShirtColor, String capColor) {
         Order order = new Order(orderName);
         putCap(order, capColor);
         putTShirt(order, tShirtColor);
