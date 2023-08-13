@@ -1,33 +1,15 @@
 package app.entities;
 
-import app.utils.Constants;
+import app.enums.Colors;
+import app.enums.Manufacturers;
 
 import static java.lang.String.format;
 
-public class Cap {
-
-    private String manufacturer;
-    private String color;
-    private double price;
-
-    public Cap(String color) {
-        this.manufacturer = Constants.CAP_MANUFACTURER;
-        this.color = color;
-        this.price = definePrice(color);
-    }
-
-    private double definePrice(String color) {
-        switch (color) {
-            case "black" -> {
-                return 15.80;
-            }
-            case "white" -> {
-                return 14.25;
-            }
-            default -> {
-                return 0.00;
-            }
-        }
+public class Cap extends Product {
+    public Cap(Manufacturers manufacturer, Colors color) {
+        this.manufacturer = manufacturer.getName();
+        this.color = color.getName();
+        this.price = manufacturer.getPrice() + color.getPrice();
     }
 
     @Override

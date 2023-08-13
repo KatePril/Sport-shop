@@ -1,33 +1,18 @@
 package app.entities;
 
-import app.utils.Constants;
+import app.enums.Colors;
+import app.enums.Manufacturers;
 
 import static java.lang.String.format;
 
-public class TShirt {
-    private String manufacturer;
-    private String color;
-    private double price;
+public class TShirt extends Product {
 
-    public TShirt(String color) {
-        this.manufacturer = Constants.T_SHIRT_MANUFACTURER;
-        this.color = color;
-        this.price = definePrice(color);
+    public TShirt(Manufacturers manufacturer, Colors color) {
+        this.manufacturer = manufacturer.getName();
+        this.color = color.getName();
+        this.price = manufacturer.getPrice() + color.getPrice();
     }
 
-    private double definePrice(String color) {
-        switch (color) {
-            case "red" -> {
-                return 18.45;
-            }
-            case "blue" -> {
-                return 17.60;
-            }
-            default -> {
-                return 0.00;
-            }
-        }
-    }
     @Override
     public String toString() {
         return "T-Shirt (manufacturer: " + manufacturer + "; price " + format("%.2f", price) + ")";
