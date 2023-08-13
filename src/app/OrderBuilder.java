@@ -6,8 +6,8 @@ import app.entities.TShirt;
 
 public final class OrderBuilder {
 
-    public static Order collectOrder(String capColor, String tShirtColor) {
-        Order order = new Order();
+    public static Order collectOrder(String orderName, String capColor, String tShirtColor) {
+        Order order = new Order(orderName);
         putCap(order, capColor);
         putTShirt(order, tShirtColor);
         order.setSum();

@@ -1,9 +1,15 @@
 package app.entities;
 
 public class Order {
+
+    private String name;
     private Cap cap;
     private TShirt tShirt;
     private double total;
+
+    public Order(String name) {
+        this.name = name;
+    }
 
     public double getTotal() {
         return total;
@@ -31,6 +37,6 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order:\n" + cap + ";\n" + tShirt + ";\n" + "Total: " + total;
+        return "Order" + name + ":\n" + cap + ";\n" + tShirt + ";\n" + "Total: " + total;
     }
 }
