@@ -40,6 +40,6 @@ public class Order {
     @Override
     public String toString() {
         String total = format("%.2f", this.total);
-        return "Order" + name + ":\n" + cap + ";\n" + tShirt + ";\n" + "Total: " + total;
+        return "Order " + name + ":\n" + cap + ";\n" + tShirt + ";\n" + "Total: " + total;
     }
 }
