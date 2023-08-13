@@ -2,6 +2,8 @@ package app.entities;
 
 import app.utils.Constants;
 
+import static java.lang.String.format;
+
 public class Cap {
 
     private String manufacturer;
@@ -30,7 +32,7 @@ public class Cap {
 
     @Override
     public String toString() {
-        return "Cap (manufacturer: " + manufacturer + "; price " + price + ")";
+        return "Cap (manufacturer: " + manufacturer + "; price " + format("%.2f", price) + ")";
     }
 
     public String getManufacturer() {

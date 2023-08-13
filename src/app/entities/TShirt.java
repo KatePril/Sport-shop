@@ -2,6 +2,8 @@ package app.entities;
 
 import app.utils.Constants;
 
+import static java.lang.String.format;
+
 public class TShirt {
     private String manufacturer;
     private String color;
@@ -28,7 +30,7 @@ public class TShirt {
     }
     @Override
     public String toString() {
-        return "T-Shirt (manufacturer: " + manufacturer + "; price " + price + ")";
+        return "T-Shirt (manufacturer: " + manufacturer + "; price " + format("%.2f", price) + ")";
     }
 
     public String getManufacturer() {
